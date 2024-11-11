@@ -26,16 +26,24 @@
             width: 100%; 
             white-space: nowrap; 
         }
-        .container {
-            max-width: 100%; 
+        .container-fluid {
+            max-width: 100%;
             padding: 20px;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        .table-responsive {
+            overflow-x: auto;
         }
     </style>
 </head>
 <body>
-    <div class="container my-5" style="max-width: 600px;">
+    <div class="container-fluid my-5">
         <h1 class="text-center mb-4">Group Members</h1>
         
+
         <div class="table-responsive mb-5">
             <table class="table table-striped table-bordered">
                 <thead class="table-dark">
@@ -93,7 +101,7 @@
             <div class="card-body">
                 <form action="" method="post">
                     <div class="mb-3">
-                        <label for="gcMemberID" class="form-label">gcMemberID</label>
+                        <label for="gcMemberID" class="form-label required">gcMemberID</label>
                         <input type="text" class="form-control" name="gcMemberID" id="gcMemberID" required>
                     </div>
                     <div class="mb-3">
