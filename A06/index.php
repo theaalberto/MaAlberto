@@ -27,17 +27,20 @@
             white-space: nowrap; 
         }
         .container {
-            max-width: 100%; 
+            max-width: 100%;
             padding: 20px;
         }
         .required:after {
             content: " *";
             color: red;
         }
+        .table-responsive {
+            overflow-x: auto;
+        }
     </style>
 </head>
 <body>
-    <div class="container my-5" style="max-width: 600px;">
+    <div class="container-fluid my-5">
         <h1 class="text-center mb-4">Group Members</h1>
         
         <div class="table-responsive mb-5">
@@ -123,9 +126,9 @@
                         <label for="gcID" class="form-label">gcID</label>
                         <input type="text" class="form-control" name="gcID" id="gcID">
                     </div>
-                    <div class="d-flex">
-                        <button type="submit" name="submit" class="btn btn-primary w-50 me-2">Add Member</button>
-                        <button type="submit" name="delete" class="btn btn-danger w-50">Delete Member</button>
+                    <div class="d-flex flex-column flex-sm-row">
+                        <button type="submit" name="submit" class="btn btn-primary w-100 w-sm-50 me-0 me-sm-2 mb-3 mb-sm-0">Add Member</button>
+                        <button type="submit" name="delete" class="btn btn-danger w-100 w-sm-50">Delete Member</button>
                     </div>
                 </form>
             </div>
